@@ -1,0 +1,12 @@
+!!!
+%html
+  %head
+    %title FU2008  
+  %body
+    / = yield
+        
+    #test 'Fuck you, 2008!'
+
+    -Twitter::Search.new(' "fuck 2008" OR "fuck you 2008" OR "2008 sucks"').each do |r| 
+      .text 
+        = r["text"]

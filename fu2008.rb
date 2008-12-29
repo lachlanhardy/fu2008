@@ -4,7 +4,8 @@ require 'twitter'
 require 'haml'
 
 get '/' do
-
+  
+  
   haml :index
   
 end

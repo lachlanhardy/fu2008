@@ -1,15 +1,13 @@
-!!!
+!!! strict
 %html
   %head
     %title FU2008  
   %body
-    / = yield
         
     %h1 Fuck you, 2008!
-
-    / = r["text"]
+    
     %ul#results
-      -Twitter::Search.new(' "fuck 2008" OR "fuck you 2008" OR "2008 sucks"').each do |r| 
+      - @results.each do|result|
         %li 
-          = r["text"]
+          = result["text"]
     

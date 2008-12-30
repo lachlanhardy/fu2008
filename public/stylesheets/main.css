@@ -57,7 +57,10 @@ body {background: #0f0f0f; color: #fefefe; font: 62.5%/1.4 'Helvetica Neue', Hel
     #page {background: #0f0f0f; color: #fefefe; margin: 0 0 0 440px; min-height: 60em; padding: 2em 1em 4em 1em; position: relative;}
         #page ul {width: 34em;}
             #page ul li {font-size: 1.6em; margin: 0 1em 5em 1em;}
-                #page ul li strong {background: #0f0f0f; color: #c00; font-size: 1.2em; font-weight: 700;}
+                #page ul li strong,
+                #page ul li em {background: #0f0f0f; color: #c00; font-size: 1.2em; font-weight: 700;}
+                
+                #page ul li em {color: gold;}
                 
                 #page p {margin: 0 0 1em 0;}
                 #page a:link {color: #fff;}

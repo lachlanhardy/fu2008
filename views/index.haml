@@ -1,5 +1,8 @@
 %ul#results
   - @results.each do|result|
     %li 
-      - result["text"] = result["text"].gsub(/^@\w[a-z]+\s/, '')
-      = result["text"]
+      - t = result["text"]
+      - t = t.gsub(/^@\w[a-z]+\s/, '')
+      - t = t.gsub(/(fuck you 2008|fuck 2008|2008 sucks)/i, '<strong>\1</strong>')
+      
+      = t

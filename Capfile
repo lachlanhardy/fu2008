@@ -7,7 +7,7 @@ load 'deploy' if respond_to?(:namespace) # cap2 differentiator
 default_run_options[:pty] = true
 
 # be sure to change these
-set :user, 'root'
+set :user, 'fu2008'
 set :domain, 'fuckyou2008.com'
 set :application, 'fu2008'
 

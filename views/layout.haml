@@ -1,0 +1,31 @@
+!!! strict
+%html
+  %head
+    %title Fuck You, 2008! 
+    %link{:rel=>'stylesheet', :href=>'/stylesheets/reset.css', :type => "text/css"} 
+    %link{:rel=>'stylesheet', :href=>'/stylesheets/main.css', :type => "text/css"} 
+  %body 
+    #wrapper
+      #banner
+        %h1 
+          %a{:href => "/"} Fuck you, 2008!
+      
+      #page
+        = yield
+    
+  / reinvigorate tracking code
+  %script{ :type => "text/javascript",  :src => "http://include.reinvigorate.net/re_.js"}
+  %script{ :type => "text/javascript"} re_("m0zu4-752765508c");
+  
+  / The Google sees all, knows all
+  :plain
+    <script type="text/javascript">
+      var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+      document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+      try {
+        var pageTracker = _gat._getTracker("UA-196032-6");
+        pageTracker._trackPageview();
+        } catch(err) {}
+    </script>

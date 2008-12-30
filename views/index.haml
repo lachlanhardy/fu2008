@@ -3,6 +3,6 @@
     %li 
       - t = result["text"]
       - t = t.gsub(/^@\w[a-z]+\s/, '')
-      - t = t.gsub(/(fuck you 2008|fuck 2008|2008 sucks)/i, '<strong>\1</strong>')
+      - t = t.gsub(/(fuck you 2008\W|fuck 2008\W|2008 sucks\W)/i, '<strong>\1</strong>')
       
       = t

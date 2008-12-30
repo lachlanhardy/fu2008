@@ -2,14 +2,28 @@
 %html
   %head
     %title Fuck You, 2008! 
+    %link{:rel => "icon", :href => "/images/favicon.ico", :type => "image/x-icon"}
+
     %link{:rel=>'stylesheet', :href=>'/stylesheets/reset.css', :type => "text/css"} 
     %link{:rel=>'stylesheet', :href=>'/stylesheets/main.css', :type => "text/css"} 
+    
   %body 
     #wrapper
       #banner
         %h1 
           %a{:href => "/"} Fuck you, 2008!
+        %p.note 
+          Part exorcism, part experiment, I built this site once I realised I wasn&rsquo;t the only person who thought this was a shitty year. Express your hatred, frustration and rage for 2008 on Twitter and maybe this can help you move past it. I&rsquo;m not big on lovey-dovey but reading of other people&rsquo;s pain certainly helped put my own into perspective.
+        %p Now, I&rsquo;m going straight into 2009 to kick some serious ass!
       
+      #footer
+        %p
+          Made with very little sleep by 
+          %a{:href => "http://lachstock.com.au/"} Lachlan Hardy
+          and some 
+          %a{:href => "/colophon"} good friends
+          in the last days of a rubbish year.
+        
       #page
         = yield
     

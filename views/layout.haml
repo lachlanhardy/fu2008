@@ -1,12 +1,17 @@
 !!! strict
 %html
   %head
-    %title FU2008  
-  %body
-        
-    %h1 Fuck you, 2008!
-    
-    = yield
+    %title Fuck You, 2008! 
+    %link{:rel=>'stylesheet', :href=>'/stylesheets/reset.css', :type => "text/css"} 
+    %link{:rel=>'stylesheet', :href=>'/stylesheets/main.css', :type => "text/css"} 
+  %body 
+    #wrapper
+      #banner
+        %h1 
+          %a{:href => "/"} Fuck you, 2008!
+      
+      #page
+        = yield
     
   / reinvigorate tracking code
   %script{ :type => "text/javascript",  :src => "http://include.reinvigorate.net/re_.js"}

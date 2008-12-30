@@ -9,3 +9,9 @@ get '/' do
   haml :index, :options => {:format => :html4,
                             :attr_wrapper => '"'}
 end
+
+# stylesheet
+get '/stylesheets/main.css' do
+  header 'Content-Type' => 'text/css; charset=utf-8'
+  css :main
+end

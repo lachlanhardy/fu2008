@@ -3,7 +3,13 @@ require 'sinatra'
 require 'twitter'
 require 'haml'
 
-# stylesheet
+# reset stylesheet
+get '/stylesheets/reset.css' do
+  header 'Content-Type' => 'text/css; charset=utf-8'
+  css :reset
+end
+
+# main stylesheet
 get '/stylesheets/main.css' do
   header 'Content-Type' => 'text/css; charset=utf-8'
   css :main
@@ -18,3 +24,8 @@ get '/' do
                             :attr_wrapper => '"'}
 end
 
+# colophon
+get '/colophon' do
+  haml :colophon, :options => {:format => :html4,
+                            :attr_wrapper => '"'}
+end

@@ -1,4 +1,5 @@
 %ul#results
   - @results.each do|result|
     %li 
+      - result["text"] = result["text"].gsub(/^@\w[a-z]+\s/, '')
       = result["text"]

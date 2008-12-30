@@ -3,6 +3,7 @@
     %li 
       - t = result["text"]
       - t = t.gsub(/^@\w[a-z]+\s/, '')
+      - t = t.gsub(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/i, '<a href="\1">\1</a>')
       - t = t.gsub(/(fuck you 2008\W|fuck 2008\W|2008 sucks\W)/i, '<strong>\1</strong>')
       
       = t

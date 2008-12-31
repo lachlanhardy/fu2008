@@ -26,7 +26,7 @@ TOC
 		/* --- =Links --- */
 		a:link {color: #000;}
 		a:visited {color: #333;}
-		a:hover, a:active, a:focus {color: #c00;}
+		a:hover, a:active, a:focus {color: #c00; cursor: url('/images/finger.cur');}
 
 		
 		/* --- =Headings --- */

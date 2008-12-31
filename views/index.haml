@@ -2,9 +2,12 @@
   - @results.each do|result|
     %li 
       - t = result["text"]
-      - t = t.gsub(/^@\w[a-z]+\s/, '')
-      - t = t.gsub(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/i, '<a href="\1">\1</a>')
-      - t = t.gsub(/(fuck you 2008\W?|fuck 2008\W?|2008 sucks\W?|#2008sux0r)/i, '<strong>\1</strong>')
-      - t = t.gsub(/(fuck yeah 2009\W?)/i, '<em>\1</em>')
-      
-      = t
+      - if t.match('Office 2008') || t.match('server 2008') || t.match('xxx') || t.match('MacOffice') || t.match('Online information 2008') || t.match('Office for Mac') || t.match('SSIS 2008')
+        / nada
+      - else
+        - t = t.gsub(/^@\w[a-z]+\s/, '')
+        - t = t.gsub(/((ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/i, '<a href="\1">\1</a>')
+        - t = t.gsub(/(fuck you 2008\W?|fuck 2008\W?|2008 sucks\W?|#2008sux0r)/i, '<strong>\1</strong>')
+        - t = t.gsub(/(fuck yeah 2009\W?)/i, '<em>\1</em>')
+        
+        = t

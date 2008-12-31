@@ -20,7 +20,7 @@ end
 # homepage
 get '/' do
   @results = []
-  @search = Twitter::Search.new(' "fuck 2008" OR "fuck you 2008" OR "2008 sucks" OR #2008sux0r')
+  @search = Twitter::Search.new(' "fuck 2008" OR "fuckyou 2008" OR "fuck you 2008" OR "2008 sucks" OR #2008sux0r')
   @search.per_page(100)
   @search.each do |item|
     unless BLACKLISTED_STRINGS.any? {|i| item["text"].match(i)}

@@ -2,7 +2,7 @@
   - @results.each do|result|
     %li 
       - t = result["text"]
-      - if t.match('Office 2008') || t.match('server 2008') || t.match('xxx') || t.match('MacOffice') || t.match('Online information 2008') || t.match('Office for Mac') || t.match('SSIS 2008') || t.match('sure like to fuck you 2008')
+      - if t.match('Office 2008') || t.match('server 2008') || t.match('xxx') || t.match('MacOffice') || t.match('Online information 2008') || t.match('Office for Mac') || t.match('SSIS 2008') || t.match('to fuck')
         / nada
       - else
         - t = t.gsub(/^@\w[a-z]+\s/, '')
